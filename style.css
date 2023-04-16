@@ -1,0 +1,27 @@
+canvas {
+  border: 1px solid black;
+}
+
+.slider-value {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#minValue,
+#maxValue {
+  width: 200px;
+}
+
+label.sliderLabel {
+  display: inline-block;
+  width: 75px;
+}
+
+.ML20 {
+  margin-left: 20px;
+}
+
+button {
+  font-size: large;
+
+}

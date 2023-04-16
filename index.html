@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Guitar fret memory & music reading practice app</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+
+<body>
+  <canvas id="musicSheet" width="2000px" height="300px"></canvas>
+  <br>
+  <div class="ML20">
+    <p>
+      <label class="sliderLabel" for="minValue">Low: <span class="slider-value" id="min-value-label"></span></label>
+      <input type="range" id="minValue" name="minValue" min="0" max="30" value="0" />
+      <br>
+      <label class="sliderLabel" for="maxValue"></label>
+      <input type="range" id="maxValue" name="maxValue" min="0" max="30" value="30" />
+      <label class="sliderLabel" for="maxValue">High:<span class="slider-value" id="max-value-label"></span></label>
+    </p>
+
+    <p>
+    <form>
+      <label> <input type="radio" name="choice" value="plane" checked> なし </label>
+      <label> <input type="radio" name="choice" value="sharp"> # </label>
+      <label> <input type="radio" name="choice" value="flat"> b </label>
+
+    </form>
+    </p>
+    <label for=""></label><button id="apply_range" class="ML20">redraw</button>
+    <button id="start" class="ML20">start</button>
+    <button id="stop">stop</button>
+    <label for="octaveUp">Octave Up</label>
+    <input type="checkbox" id="octaveUp" value="example">
+    <label for="range-slider" class="sliderLabel ML20">BPM:<span id="slider-value">100</span></label>
+    <input type="range" id="range-slider" name="range-slider" min="50" max="200" value="100">
+  </div>
+
+  <br>
+  <br>
+  <hr>
+  <div class="ML20">
+    <h2>ギターフレット記憶&譜読み練習アプリ <br>
+      Guitar fret memory & music reading practice app</h2>
+    <p>譜面を見てギターのフレットを押さえられるようになるための練習アプリです。<br>
+      ランダムだけどなんとなく音楽的っぽくもある音の並びを生成します。</p>
+    <p>This is an application for practicing to become able to hold down the frets of the guitar by looking at the music
+      sheet. <br>Generates a sequence of random but somewhat musical sounds.
+    </p>
+    <ul>
+      <li> 上部の二つのスライダーで生成する音程の範囲を設定します。</li>
+      <li> ラジオボタンで臨時記号（#,b）の有無を設定します。</li>
+      <li> redrawボタンで設定に合った譜面を生成します。</li>
+      <li> playボタンで演奏します。stopボタンで演奏を停止します。</li>
+      <li> 低音が聞き取りづらい時は「Octave Up」のチェックボタンをオンにして再生します。</li>
+      <li> BPMスライダーで再生テンポを調整します。</li>
+    </ul>
+    <ul>
+      <li> The top two sliders set the range of tones to be generated. </li>
+      <li> The radio buttons allow you to set the presence or absence of accidentals (#,b). </li>
+      <li> Press the redraw button to generate a musical score that matches your settings. </li>
+      <li> Press "play" to play, "stop" to stop playing. </li>
+      <li> If you have difficulty hearing the bass note, turn on the "Octave Up" check button then play. </li>
+      <li> Adjust the playback tempo with the BPM slider. </li>
+
+
+      Translated with www.DeepL.com/Translator (free version)
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
